@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BoletoImpressao/BoletoNet.css" />
+    <EmbeddedResource Include="BoletoImpressao/BoletoNetPDF.css" />
+    <EmbeddedResource Include="Imagens/*" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CoreCompat.System.Drawing.v2" Version="5.2.0-preview1-r131" />
+    <PackageReference Include="NReco.PdfGenerator.LT" Version="1.1.15" />
+  </ItemGroup>
+</Project>

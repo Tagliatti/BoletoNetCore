@@ -3,8 +3,14 @@
 [![Issues open](https://img.shields.io/github/issues/BoletoNet/boleto2net.svg)](https://huboard.com/BoletoNet/boleto2net/)
 [![Coverage Status](https://coveralls.io/repos/github/BoletoNet/boleto2net/badge.svg?branch=master)](https://coveralls.io/github/BoletoNet/boleto2net?branch=master)
 
-# boleto2net
-Nova versão do Boleto.Net
+# BoletoNetCore
+BoletoNetCore é um componente desenvolvido em C# e .NET Core para Emissão e Impressão de Boletos Bancários, Geração de Arquivo de Remessa e Leitura do Arquivo de Retorno.
+
+# Créditos 
+Este é uma converção direta do [boleto2net](https://github.com/BoletoNet/boleto2net) para funcionar em .NET Core. ´
+
+# Atenção
+Atualmente apenas a Emissão e Impressão de Boletos Bancários está funcionando como pode ser verificado nos testes.
 
 ### Carteiras Homologadas
 * Banrisul - Carteira 1
