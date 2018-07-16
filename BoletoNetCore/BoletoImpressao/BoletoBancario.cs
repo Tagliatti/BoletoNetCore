@@ -623,16 +623,23 @@ namespace BoletoNetCore
             var fnBarra = fileName + @"BoletoNetBarra.gif";
             if (!File.Exists(fnBarra))
             {
-                var imgConverter = new ImageConverter();
-                var imgBuffer = (byte[])imgConverter.ConvertTo(Html.barra, typeof(byte[]));
-                var ms = new MemoryStream(imgBuffer);
-
-                using (Stream stream = File.Create(fnBarra))
+                var streamBarra = Assembly.GetExecutingAssembly().GetManifestResourceStream("BoletoNetCore.Imagens.barra.gif");
+                using (Stream file = File.Create(fnBarra))
                 {
-                    CopiarStream(ms, stream);
-                    ms.Flush();
-                    ms.Dispose();
+                    CopiarStream(streamBarra, file);
                 }
+                /*Trecho de código abaixo não funciona em .NET Core devido a incompatibilidades de conversão/serialização.
+                 Vide: https://github.com/dotnet/coreclr/blob/0fbd855e38bc3ec269479b5f6bf561dcfd67cbb6/src/System.Private.CoreLib/src/System/Resources/ResourceReader.cs             
+                */
+                //var imgConverter = new ImageConverter();
+                //var imgBuffer = (byte[])imgConverter.ConvertTo(Html.barra, typeof(byte[]));
+                //var ms = new MemoryStream(imgBuffer);
+                //using (Stream stream = File.Create(fnBarra))
+                //{
+                //    CopiarStream(ms, stream);
+                //    ms.Flush();
+                //    ms.Dispose();
+                //}
             }
 
             var fnCodigoBarras = Path.GetTempFileName();
