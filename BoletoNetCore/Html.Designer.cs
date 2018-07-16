@@ -19,10 +19,10 @@ namespace BoletoNetCore {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Html {
+    internal class Html {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace BoletoNetCore {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Resources.ResourceManager ResourceManager {
+        internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BoletoNetCore.Html", typeof(Html).Assembly);
@@ -51,7 +51,7 @@ namespace BoletoNetCore {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Globalization.CultureInfo Culture {
+        internal static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace BoletoNetCore {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap barra {
+        internal static System.Drawing.Bitmap barra {
             get {
                 object obj = ResourceManager.GetObject("barra", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -73,7 +73,7 @@ namespace BoletoNetCore {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap barrainterna {
+        internal static System.Drawing.Bitmap barrainterna {
             get {
                 object obj = ResourceManager.GetObject("barrainterna", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -101,7 +101,7 @@ namespace BoletoNetCore {
         ///		&lt;/table&gt;				
         ///		.
         /// </summary>
-        public static string CabecalhoTabelaDemonstrativo {
+        internal static string CabecalhoTabelaDemonstrativo {
             get {
                 return ResourceManager.GetString("CabecalhoTabelaDemonstrativo", resourceCulture);
             }
@@ -125,10 +125,9 @@ namespace BoletoNetCore {
         ///														&lt;/td&gt;
         ///												&lt;/tr&gt;
         ///												&lt;tr class=&quot;cp h12 At rBb&quot;&gt;
-        ///														&lt;td&gt;
-        ///																@ [rest of string was truncated]&quot;;.
+        ///														&lt;td&gt;        /// [rest of string was truncated]&quot;;.
         /// </summary>
-        public static string Carne {
+        internal static string Carne {
             get {
                 return ResourceManager.GetString("Carne", resourceCulture);
             }
@@ -141,7 +140,7 @@ namespace BoletoNetCore {
         ///				&lt;/tr&gt;
         ///		&lt;/table&gt;.
         /// </summary>
-        public static string ComprovanteEntrega1 {
+        internal static string ComprovanteEntrega1 {
             get {
                 return ResourceManager.GetString("ComprovanteEntrega1", resourceCulture);
             }
@@ -159,7 +158,7 @@ namespace BoletoNetCore {
         ///				&lt;/tr&gt;
         ///		&lt;/table&gt;.
         /// </summary>
-        public static string ComprovanteEntrega2 {
+        internal static string ComprovanteEntrega2 {
             get {
                 return ResourceManager.GetString("ComprovanteEntrega2", resourceCulture);
             }
@@ -181,7 +180,7 @@ namespace BoletoNetCore {
         ///				&lt;/tr&gt;
         ///		&lt;/table&gt;.
         /// </summary>
-        public static string ComprovanteEntrega3 {
+        internal static string ComprovanteEntrega3 {
             get {
                 return ResourceManager.GetString("ComprovanteEntrega3", resourceCulture);
             }
@@ -203,7 +202,7 @@ namespace BoletoNetCore {
         ///				&lt;/tr&gt;
         ///		&lt;/table&gt;.
         /// </summary>
-        public static string ComprovanteEntrega4 {
+        internal static string ComprovanteEntrega4 {
             get {
                 return ResourceManager.GetString("ComprovanteEntrega4", resourceCulture);
             }
@@ -221,7 +220,7 @@ namespace BoletoNetCore {
         ///				&lt;/tr&gt;
         ///		&lt;/table&gt;.
         /// </summary>
-        public static string ComprovanteEntrega5 {
+        internal static string ComprovanteEntrega5 {
             get {
                 return ResourceManager.GetString("ComprovanteEntrega5", resourceCulture);
             }
@@ -245,7 +244,7 @@ namespace BoletoNetCore {
         ///				&lt;/tr&gt;
         ///		&lt;/table&gt;.
         /// </summary>
-        public static string ComprovanteEntrega6 {
+        internal static string ComprovanteEntrega6 {
             get {
                 return ResourceManager.GetString("ComprovanteEntrega6", resourceCulture);
             }
@@ -264,9 +263,9 @@ namespace BoletoNetCore {
         ///												&lt;td class=&quot;w104&quot;&gt;(&amp;nbsp;&amp;nbsp;)&amp;nbsp;Ausente&lt;/td&gt;
         ///												&lt;td&gt;(&amp;nbsp;&amp;nbsp;)&amp;nbsp;Não existe n. indicado&lt;/td&gt;
         ///												&lt;td&gt;(&amp;nbsp;&amp;nbsp;)&amp;nbsp;Recusado&lt;/td&gt;
-        ///												&lt;td class=&quot;w104&quot;&gt;(&amp;nbsp;&amp;nbsp;)&amp;nbsp;Não Procurad [rest of string was truncated]&quot;;.
+        ///												&lt;td class=&quot;w104&quot;&gt;(&amp;nbsp;&amp;nbsp;)&amp;nbsp; [rest of string was truncated]&quot;;.
         /// </summary>
-        public static string ComprovanteEntrega7 {
+        internal static string ComprovanteEntrega7 {
             get {
                 return ResourceManager.GetString("ComprovanteEntrega7", resourceCulture);
             }
@@ -292,11 +291,9 @@ namespace BoletoNetCore {
         ///							 &lt;td&gt;&amp;nbsp;&lt;/td&gt;
         ///							 &lt;td&gt;&amp;nbsp;&lt;/td&gt;
         ///							 &lt;td&gt;&amp;nbsp;&lt;/td&gt;
-        ///							 &lt;td&gt;&amp;nbsp;&lt;/td&gt;
-        ///						&lt;/tr&gt;
-        ///			 [rest of string was truncated]&quot;;.
+        ///							 &lt;td&gt;&amp;nbsp;&lt;/ [rest of string was truncated]&quot;;.
         /// </summary>
-        public static string ComprovanteEntrega71 {
+        internal static string ComprovanteEntrega71 {
             get {
                 return ResourceManager.GetString("ComprovanteEntrega71", resourceCulture);
             }
@@ -305,7 +302,7 @@ namespace BoletoNetCore {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap corte {
+        internal static System.Drawing.Bitmap corte {
             get {
                 object obj = ResourceManager.GetObject("corte", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -322,7 +319,7 @@ namespace BoletoNetCore {
         ///				&lt;/tr&gt;
         ///		.
         /// </summary>
-        public static string GrupoDemonstrativo {
+        internal static string GrupoDemonstrativo {
             get {
                 return ResourceManager.GetString("GrupoDemonstrativo", resourceCulture);
             }
@@ -338,7 +335,7 @@ namespace BoletoNetCore {
         ///				&lt;/tr&gt;
         ///		&lt;/table&gt;.
         /// </summary>
-        public static string Instrucoes {
+        internal static string Instrucoes {
             get {
                 return ResourceManager.GetString("Instrucoes", resourceCulture);
             }
@@ -347,7 +344,7 @@ namespace BoletoNetCore {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap ponto {
+        internal static System.Drawing.Bitmap ponto {
             get {
                 object obj = ResourceManager.GetObject("ponto", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
@@ -368,7 +365,7 @@ namespace BoletoNetCore {
         ///		&lt;/table&gt;
         ///		&lt;br /&gt;.
         /// </summary>
-        public static string ReciboCedenteParte0 {
+        internal static string ReciboCedenteParte0 {
             get {
                 return ResourceManager.GetString("ReciboCedenteParte0", resourceCulture);
             }
@@ -385,7 +382,7 @@ namespace BoletoNetCore {
         ///				&lt;/tr&gt;
         ///		&lt;/table&gt;.
         /// </summary>
-        public static string ReciboCedenteParte1 {
+        internal static string ReciboCedenteParte1 {
             get {
                 return ResourceManager.GetString("ReciboCedenteParte1", resourceCulture);
             }
@@ -400,7 +397,7 @@ namespace BoletoNetCore {
         ///				&lt;tr class=&quot;h13&quot;&gt;&lt;td colspan=&quot;3&quot; /&gt;&lt;/tr&gt;
         ///		&lt;/table&gt;.
         /// </summary>
-        public static string ReciboCedenteParte10 {
+        internal static string ReciboCedenteParte10 {
             get {
                 return ResourceManager.GetString("ReciboCedenteParte10", resourceCulture);
             }
@@ -413,7 +410,7 @@ namespace BoletoNetCore {
         ///				&lt;/tr&gt;
         ///		&lt;/table&gt;.
         /// </summary>
-        public static string ReciboCedenteParte11 {
+        internal static string ReciboCedenteParte11 {
             get {
                 return ResourceManager.GetString("ReciboCedenteParte11", resourceCulture);
             }
@@ -434,7 +431,7 @@ namespace BoletoNetCore {
         ///				&lt;tr class=&quot;h13&quot;&gt;&lt;td /&gt;&lt;/tr&gt;
         ///		&lt;/table&gt;.
         /// </summary>
-        public static string ReciboCedenteParte12 {
+        internal static string ReciboCedenteParte12 {
             get {
                 return ResourceManager.GetString("ReciboCedenteParte12", resourceCulture);
             }
@@ -452,7 +449,7 @@ namespace BoletoNetCore {
         ///				&lt;/tr&gt;
         ///		&lt;/table&gt;.
         /// </summary>
-        public static string ReciboCedenteParte2 {
+        internal static string ReciboCedenteParte2 {
             get {
                 return ResourceManager.GetString("ReciboCedenteParte2", resourceCulture);
             }
@@ -470,7 +467,7 @@ namespace BoletoNetCore {
         ///				&lt;/tr&gt;
         ///		&lt;/table&gt;.
         /// </summary>
-        public static string ReciboCedenteParte3 {
+        internal static string ReciboCedenteParte3 {
             get {
                 return ResourceManager.GetString("ReciboCedenteParte3", resourceCulture);
             }
@@ -491,10 +488,9 @@ namespace BoletoNetCore {
         ///						&lt;td&gt;@NUMERODOCUMENTO&lt;/td&gt;
         ///						&lt;td&gt;@ESPECIEDOCUMENTO&lt;/td&gt;
         ///						&lt;td&gt;@ACEITE&lt;/td&gt;
-        ///						&lt;td&gt;@DATAPROCESSAMENTO&lt;/td&gt;
-        ///						&lt;td c [rest of string was truncated]&quot;;.
+        ///						&lt;td&gt;@DATAPROCESSAMENTO&lt;/t [rest of string was truncated]&quot;;.
         /// </summary>
-        public static string ReciboCedenteParte4 {
+        internal static string ReciboCedenteParte4 {
             get {
                 return ResourceManager.GetString("ReciboCedenteParte4", resourceCulture);
             }
@@ -517,9 +513,9 @@ namespace BoletoNetCore {
         ///						&lt;td class=&quot;Al&quot;&gt;@CARTEIRA&lt;/td&gt;
         ///						&lt;td class=&quot;Al&quot;&gt;@ESPECIE&lt;/td&gt;
         ///						&lt;td&gt;@QUANTIDADE&lt;/td&gt;
-        ///						&lt;td&gt;@VALORDOC [rest of string was truncated]&quot;;.
+        ///			 [rest of string was truncated]&quot;;.
         /// </summary>
-        public static string ReciboCedenteParte5 {
+        internal static string ReciboCedenteParte5 {
             get {
                 return ResourceManager.GetString("ReciboCedenteParte5", resourceCulture);
             }
@@ -538,9 +534,9 @@ namespace BoletoNetCore {
         ///								&lt;div class=&quot;t&quot;&gt;(-) Outras deduções&lt;/div&gt;
         ///								&lt;div class=&quot;c BB&quot;&gt;@OUTRASDEDUCOES&lt;/div&gt;
         ///								&lt;div class=&quot;t&quot;&gt;(+) Mora / Multa&lt;/div&gt;
-        ///								&lt;div class=&quot;c BB&quot;&gt;@MO [rest of string was truncated]&quot;;.
+        ///								&lt;div clas [rest of string was truncated]&quot;;.
         /// </summary>
-        public static string ReciboCedenteParte6 {
+        internal static string ReciboCedenteParte6 {
             get {
                 return ResourceManager.GetString("ReciboCedenteParte6", resourceCulture);
             }
@@ -549,7 +545,7 @@ namespace BoletoNetCore {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        public static string ReciboCedenteParte7 {
+        internal static string ReciboCedenteParte7 {
             get {
                 return ResourceManager.GetString("ReciboCedenteParte7", resourceCulture);
             }
@@ -565,7 +561,7 @@ namespace BoletoNetCore {
         ///				&lt;/tr&gt;
         ///		&lt;/table&gt;.
         /// </summary>
-        public static string ReciboCedenteParte8 {
+        internal static string ReciboCedenteParte8 {
             get {
                 return ResourceManager.GetString("ReciboCedenteParte8", resourceCulture);
             }
@@ -583,7 +579,7 @@ namespace BoletoNetCore {
         ///				&lt;/tr&gt;
         ///		&lt;/table&gt;.
         /// </summary>
-        public static string ReciboCedenteParte9 {
+        internal static string ReciboCedenteParte9 {
             get {
                 return ResourceManager.GetString("ReciboCedenteParte9", resourceCulture);
             }
@@ -604,10 +600,9 @@ namespace BoletoNetCore {
         ///				&lt;tr class=&quot;ct h13&quot;&gt;
         ///						&lt;td&gt;Local de pagamento&lt;/td&gt;
         ///						&lt;td&gt;&lt;/td&gt;
-        ///				&lt;/tr&gt;						
-        ///				&lt;tr cl [rest of string was truncated]&quot;;.
+        ///				&lt;/tr&gt;			 [rest of string was truncated]&quot;;.
         /// </summary>
-        public static string ReciboCedenteRelatorioValores {
+        internal static string ReciboCedenteRelatorioValores {
             get {
                 return ResourceManager.GetString("ReciboCedenteRelatorioValores", resourceCulture);
             }
@@ -623,7 +618,7 @@ namespace BoletoNetCore {
         ///				&lt;/tr&gt;
         ///		&lt;/table&gt;.
         /// </summary>
-        public static string ReciboSacadoParte1 {
+        internal static string ReciboSacadoParte1 {
             get {
                 return ResourceManager.GetString("ReciboSacadoParte1", resourceCulture);
             }
@@ -639,7 +634,7 @@ namespace BoletoNetCore {
         ///				&lt;/tr&gt;
         ///		&lt;/table&gt;.
         /// </summary>
-        public static string ReciboSacadoParte10 {
+        internal static string ReciboSacadoParte10 {
             get {
                 return ResourceManager.GetString("ReciboSacadoParte10", resourceCulture);
             }
@@ -657,7 +652,7 @@ namespace BoletoNetCore {
         ///				&lt;/tr&gt;
         ///		&lt;/table&gt;.
         /// </summary>
-        public static string ReciboSacadoParte2 {
+        internal static string ReciboSacadoParte2 {
             get {
                 return ResourceManager.GetString("ReciboSacadoParte2", resourceCulture);
             }
@@ -681,7 +676,7 @@ namespace BoletoNetCore {
         ///				&lt;/tr&gt;
         ///		&lt;/table&gt;.
         /// </summary>
-        public static string ReciboSacadoParte3 {
+        internal static string ReciboSacadoParte3 {
             get {
                 return ResourceManager.GetString("ReciboSacadoParte3", resourceCulture);
             }
@@ -703,7 +698,7 @@ namespace BoletoNetCore {
         ///				&lt;/tr&gt;
         ///		&lt;/table&gt;.
         /// </summary>
-        public static string ReciboSacadoParte4 {
+        internal static string ReciboSacadoParte4 {
             get {
                 return ResourceManager.GetString("ReciboSacadoParte4", resourceCulture);
             }
@@ -724,10 +719,9 @@ namespace BoletoNetCore {
         ///						&lt;td&gt;@MORAMULTA&lt;/td&gt;
         ///						&lt;td&gt;@OUTROSACRESCIMOS&lt;/td&gt;
         ///						&lt;td class=&quot;Ar&quot;&gt;&amp;nbsp;@VALORCOBRADO&lt;/td&gt;
-        ///				&lt;/tr&gt;
-        ///		&lt;/table&gt;.
+        ///				&lt;/ [rest of string was truncated]&quot;;.
         /// </summary>
-        public static string ReciboSacadoParte5 {
+        internal static string ReciboSacadoParte5 {
             get {
                 return ResourceManager.GetString("ReciboSacadoParte5", resourceCulture);
             }
@@ -746,7 +740,7 @@ namespace BoletoNetCore {
         ///				&lt;/tr&gt;
         ///		&lt;/table&gt;.
         /// </summary>
-        public static string ReciboSacadoParte6 {
+        internal static string ReciboSacadoParte6 {
             get {
                 return ResourceManager.GetString("ReciboSacadoParte6", resourceCulture);
             }
@@ -764,7 +758,7 @@ namespace BoletoNetCore {
         ///				&lt;/tr&gt;
         ///		&lt;/table&gt;.
         /// </summary>
-        public static string ReciboSacadoParte7 {
+        internal static string ReciboSacadoParte7 {
             get {
                 return ResourceManager.GetString("ReciboSacadoParte7", resourceCulture);
             }
@@ -780,7 +774,7 @@ namespace BoletoNetCore {
         ///				&lt;tr class=&quot;h13&quot;&gt;&lt;td /&gt;&lt;/tr&gt;
         ///		&lt;/table&gt;.
         /// </summary>
-        public static string ReciboSacadoParte8 {
+        internal static string ReciboSacadoParte8 {
             get {
                 return ResourceManager.GetString("ReciboSacadoParte8", resourceCulture);
             }
@@ -796,7 +790,7 @@ namespace BoletoNetCore {
         ///				&lt;/tr&gt;
         ///		.
         /// </summary>
-        public static string TotalDemonstrativo {
+        internal static string TotalDemonstrativo {
             get {
                 return ResourceManager.GetString("TotalDemonstrativo", resourceCulture);
             }

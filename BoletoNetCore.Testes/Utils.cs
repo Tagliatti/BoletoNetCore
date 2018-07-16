@@ -205,7 +205,7 @@ namespace BoletoNetCore.Testes
                             html.Append(boletoParaImpressao.MontaHtml());
                             html.Append("</div>");
                         }
-                        var pdf = new HtmlToPdfConverter().GeneratePdf(html.ToString());
+                        var pdf = new HtmlToPdfConverter().GeneratePdf(html.ToString()); //Licença comercial necessária para versão NET Core
                         using (var fs = new FileStream(nomeArquivoPDF, FileMode.Create))
                             fs.Write(pdf, 0, pdf.Length);
                         if (!File.Exists(nomeArquivoPDF))
