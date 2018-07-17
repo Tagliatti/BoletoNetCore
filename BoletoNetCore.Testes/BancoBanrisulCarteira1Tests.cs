@@ -29,13 +29,13 @@ namespace BoletoNetCore.Testes
         public void Banrisul_1_REM400_BancoEmite()
         {
             _banco.Cedente.ContaBancaria.TipoImpressaoBoleto = TipoImpressaoBoleto.Banco;
-            Utils.TestarHomologacao(_banco, TipoArquivo.CNAB400, nameof(BancoBanrisulCarteira1Tests) + "_BancoEmite", 5, true, "?", 0);
+            Utils.TestarHomologacao(_banco, TipoArquivo.CNAB400, nameof(BancoBanrisulCarteira1Tests) + "_BancoEmite", 5, false, "?", 0);
         }
         [Test]
         public void Banrisul_1_REM400_EmpresaEmite()
         {
             _banco.Cedente.ContaBancaria.TipoImpressaoBoleto = TipoImpressaoBoleto.Empresa;
-            Utils.TestarHomologacao(_banco, TipoArquivo.CNAB400, nameof(BancoBanrisulCarteira1Tests) + "_EmpresaEmite", 5, true, "?", 12345);
+            Utils.TestarHomologacao(_banco, TipoArquivo.CNAB400, nameof(BancoBanrisulCarteira1Tests) + "_EmpresaEmite", 5, false, "?", 12345);
         }
 
         [TestCase(276.15, "458", "BB874A", "1", "00000458-02", "04191693400000276152103401234560000004584090", "04192.10349 01234.560009 00045.840907 1 69340000027615", 2016, 10, 1)]

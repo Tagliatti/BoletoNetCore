@@ -28,13 +28,13 @@ namespace BoletoNetCore.Testes
         [Test]
         public void Sicoob_1_01_REM240()
         {
-            Utils.TestarHomologacao(_banco, TipoArquivo.CNAB240, nameof(BancoSicoobCarteira101Tests), 5, true, "?", 223344);
+            Utils.TestarHomologacao(_banco, TipoArquivo.CNAB240, nameof(BancoSicoobCarteira101Tests), 5, false, "?", 223344);
         }
 
         [Test]
         public void Sicoob_1_01_REM400()
         {
-            Utils.TestarHomologacao(_banco, TipoArquivo.CNAB400, nameof(BancoSicoobCarteira101Tests), 5, true, "?", 223344);
+            Utils.TestarHomologacao(_banco, TipoArquivo.CNAB400, nameof(BancoSicoobCarteira101Tests), 5, false, "?", 223344);
         }
 
 
