@@ -2,7 +2,7 @@
 using BoletoNetCore.Extensions;
 using NUnit.Framework;
 
-namespace BoletoNetCore.Testes
+namespace Boleto2Net.Testes
 {
     public class DateTimeExtensionsTest
     {
