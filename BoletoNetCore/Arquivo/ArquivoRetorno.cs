@@ -11,9 +11,11 @@ namespace BoletoNetCore
         public Boletos Boletos { get; set; } = new Boletos();
         public DateTime? DataGeracao { get; set; }
         public int? NumeroSequencial { get; set; }
+        private bool _ignorarCarteiraBoleto = false;
+        
         #region Construtores
 
-        public ArquivoRetorno(IBanco banco, TipoArquivo tipoArquivo)
+        public ArquivoRetorno(IBanco banco, TipoArquivo tipoArquivo, bool variasCarteiras = false)
         {
             Banco = banco;
             TipoArquivo = tipoArquivo;
@@ -125,7 +127,7 @@ namespace BoletoNetCore
             if (tipoRegistro == "3" & tipoSegmento == "T")
             {
                 // Segmento T - Indica um novo boleto
-                var boleto = new Boleto(this.Banco);
+                var boleto = new Boleto(this.Banco, _ignorarCarteiraBoleto);
                 Banco.LerDetalheRetornoCNAB240SegmentoT(ref boleto, registro);
                 Boletos.Add(boleto);
                 return;
