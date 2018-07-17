@@ -2,7 +2,7 @@
 BoletoNetCore é um componente desenvolvido em C# e .NET Core para Emissão e Impressão de Boletos Bancários, Geração de Arquivo de Remessa e Leitura do Arquivo de Retorno.
 
 # Créditos 
-Este é uma converção direta do [boleto2net](https://github.com/BoletoNet/boleto2net) para funcionar em .NET Core.
+Este é uma conversão direta do [boleto2net](https://github.com/BoletoNet/boleto2net) para funcionar em .NET Core.
 
 # Atenção
 Atualmente apenas a Emissão e Impressão de Boletos Bancários está funcionando como pode ser verificado nos testes.
