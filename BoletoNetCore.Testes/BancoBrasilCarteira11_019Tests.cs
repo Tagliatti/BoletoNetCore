@@ -30,13 +30,13 @@ namespace BoletoNetCore.Testes
         [Test]
         public void Brasil_11_019_REM240()
         {
-            Utils.TestarHomologacao(_banco, TipoArquivo.CNAB240, nameof(BancoBrasilCarteira11019Tests), 5, true, "?", 0);
+            Utils.TestarHomologacao(_banco, TipoArquivo.CNAB240, nameof(BancoBrasilCarteira11019Tests), 5, false, "?", 0);
         }
 
         [Test]
         public void Brasil_11_019_REM400()
         {
-            Utils.TestarHomologacao(_banco, TipoArquivo.CNAB400, nameof(BancoBrasilCarteira11019Tests), 5, true, "?", 0);
+            Utils.TestarHomologacao(_banco, TipoArquivo.CNAB400, nameof(BancoBrasilCarteira11019Tests), 5, false, "?", 0);
         }
 
     }

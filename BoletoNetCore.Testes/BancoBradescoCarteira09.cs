@@ -27,12 +27,12 @@ namespace BoletoNetCore.Testes
         [Test]
         public void Bradesco_09_REM240()
         {
-            Utils.TestarHomologacao(_banco, TipoArquivo.CNAB240, nameof(BancoBradescoCarteira09), 5, true, "?", 223344);
+            Utils.TestarHomologacao(_banco, TipoArquivo.CNAB240, nameof(BancoBradescoCarteira09), 5, false, "?", 223344);
         }
         [Test]
         public void Bradesco_09_REM400()
         {
-            Utils.TestarHomologacao(_banco, TipoArquivo.CNAB400, nameof(BancoBradescoCarteira09), 5, true, "?", 223344);
+            Utils.TestarHomologacao(_banco, TipoArquivo.CNAB400, nameof(BancoBradescoCarteira09), 5, false, "?", 223344);
         }
 
 
