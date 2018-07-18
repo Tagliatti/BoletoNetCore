@@ -306,6 +306,11 @@ namespace BoletoNetCore
         {
             throw new NotImplementedException();
         }
+        
+        public string FormatarNomeArquivoRemessa(int numeroSequencial)
+        {
+            return "";
+        }
 
         private string GerarHeaderRemessaCNAB240(int numeroArquivoRemessa, ref int numeroRegistroGeral)
         {

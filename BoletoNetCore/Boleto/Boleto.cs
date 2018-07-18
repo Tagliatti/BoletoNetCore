@@ -27,7 +27,7 @@ namespace BoletoNetCore
                 TipoCarteira = banco.Cedente.ContaBancaria.TipoCarteiraPadrao;
             }
         }
-        
+
         public int CodigoMoeda { get; set; } = 9;
         public string EspecieMoeda { get; set; } = "R$";
         public int QuantidadeMoeda { get; set; } = 0;

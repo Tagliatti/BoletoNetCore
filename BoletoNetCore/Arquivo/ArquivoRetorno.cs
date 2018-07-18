@@ -19,6 +19,7 @@ namespace BoletoNetCore
         {
             Banco = banco;
             TipoArquivo = tipoArquivo;
+            _ignorarCarteiraBoleto = variasCarteiras;
         }
 
         /// <summary>
@@ -179,7 +180,7 @@ namespace BoletoNetCore
             Boleto boleto;
             if (novoBoleto)
             {
-                boleto = new Boleto(this.Banco);
+                boleto = new Boleto(this.Banco, _ignorarCarteiraBoleto);
             }
             else
             {

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using BoletoNetCore.Exceptions;
+using BoletoNetCore.Extensions;
 using static System.String;
 
 
@@ -707,6 +708,11 @@ namespace BoletoNetCore
 
         public void LerTrailerRetornoCNAB400(string registro)
         {
+        }
+
+        public string FormatarNomeArquivoRemessa(int numeroSequencial)
+        {
+            return $"CB{DateTime.Now.Date.Day:00}{DateTime.Now.Date.Month:00}{numeroSequencial.ToString().PadLeft(9, '0').Right(2)}.rem";
         }
 
         private string GerarHeaderRemessaCNAB400(int numeroArquivoRemessa, ref int numeroRegistroGeral)

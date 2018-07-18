@@ -773,6 +773,11 @@ namespace BoletoNetCore
                 //Data Vencimento do Título
                 boleto.DataVencimento = Utils.ToDateTime(Utils.ToInt32(registro.Substring(73, 8)).ToString("##-##-####"));
 
+                //18.3T 97 99 3 - Num Banco Cobr./Receb.
+                boleto.BancoCobradorRecebedor = registro.Substring(96, 3);
+                //19.3T 100 104 5 - Num	Ag. Cobradora
+                boleto.AgenciaCobradoraRecebedora = registro.Substring(99, 6);
+
                 //Dados Sacado
                 boleto.Sacado = new Sacado();
                 string str = registro.Substring(133, 15);
@@ -913,6 +918,12 @@ namespace BoletoNetCore
         public void LerTrailerRetornoCNAB400(string registro)
         {
         }
+        
+        public string FormatarNomeArquivoRemessa(int numeroSequencial)
+        {
+            return numeroSequencial.ToString();
+        }
+        
         #endregion
 
         private string OcorrenciasCnab400(string codigo)
