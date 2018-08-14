@@ -5,7 +5,7 @@ BoletoNetCore é um componente desenvolvido em C# e .NET Core para Emissão e Im
 Este é uma conversão direta do [boleto2net](https://github.com/BoletoNet/boleto2net) para funcionar em .NET Core.
 
 # Atenção
-Atualmente apenas a Emissão e Impressão de Boletos Bancários está funcionando como pode ser verificado nos testes.
+Atualmente não é possível gerar PDF.
 
 ### Carteiras Homologadas
 * Banrisul - Carteira 1
