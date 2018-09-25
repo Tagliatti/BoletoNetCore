@@ -23,7 +23,7 @@ namespace BoletoNetCore
             if (!CarteiraFactory<BancoSantander>.CarteiraEstaImplementada(contaBancaria.CarteiraComVariacaoPadrao))
                 throw BoletoNetCoreException.CarteiraNaoImplementada(contaBancaria.CarteiraComVariacaoPadrao);
 
-            contaBancaria.FormatarDados("ATÉ O VENCIMENTO EM QUALQUER BANCO. APÓS O VENCIMENTO SOMENTE NO SANTANDER.", "", digitosConta: 9);
+            contaBancaria.FormatarDados("ATÉ O VENCIMENTO EM QUALQUER BANCO. APÓS O VENCIMENTO SOMENTE NO SANTANDER.", "", "", digitosConta: 9);
 
             var codigoCedente = Cedente.Codigo;
             Cedente.Codigo = codigoCedente.Length <= 7 ? codigoCedente.PadLeft(7, '0') : throw BoletoNetCoreException.CodigoCedenteInvalido(codigoCedente, 7);

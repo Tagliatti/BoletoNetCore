@@ -33,7 +33,7 @@ namespace BoletoNetCore
             if (Cedente.CodigoDV == Empty)
                 throw new Exception($"Dígito do código do cedente ({codigoCedente}) não foi informado.");
 
-            contaBancaria.FormatarDados("PAGÁVEL EM QUALQUER BANCO ATÉ A DATA DE VENCIMENTO.", "", 8);
+            contaBancaria.FormatarDados("PAGÁVEL EM QUALQUER BANCO ATÉ A DATA DE VENCIMENTO.", "", "", 8);
 
             Cedente.Codigo = codigoCedente.Length <= 6 ? codigoCedente.PadLeft(6, '0'): throw BoletoNetCoreException.CodigoCedenteInvalido(codigoCedente, 6);
 
@@ -410,10 +410,12 @@ namespace BoletoNetCore
                 var codMulta = "0";
                 if (boleto.ValorMulta > 0)
                     codMulta = "1";
-                var msg3 = boleto.MensagemArquivoRemessa.PadRight(500, ' ').Substring(00, 40).FitStringLength(40, ' ');
-                var msg4 = boleto.MensagemArquivoRemessa.PadRight(500, ' ').Substring(40, 40).FitStringLength(40, ' ');
-                if (codMulta == "0" & IsNullOrWhiteSpace(msg3))
+
+                if (codMulta == "0")
+                {
+                    // Se não tiver informação sobre Multa, não precisa gerar o registro.
                     return "";
+                }
 
                 numeroRegistroGeral++;
                 TRegistroEDI reg = new TRegistroEDI();
@@ -434,8 +436,8 @@ namespace BoletoNetCore
                 reg.Adicionar(TTiposDadoEDI.ediDataDDMMAAAA_________, 0067, 008, 0, boleto.DataMulta, '0');
                 reg.Adicionar(TTiposDadoEDI.ediNumericoSemSeparador_, 0075, 015, 2, boleto.ValorMulta, '0');
                 reg.Adicionar(TTiposDadoEDI.ediAlphaAliEsquerda_____, 0090, 010, 0, Empty, ' ');
-                reg.Adicionar(TTiposDadoEDI.ediAlphaAliEsquerda_____, 0100, 040, 0, msg3, ' ');
-                reg.Adicionar(TTiposDadoEDI.ediAlphaAliEsquerda_____, 0140, 040, 0, msg4, ' ');
+                reg.Adicionar(TTiposDadoEDI.ediAlphaAliEsquerda_____, 0100, 040, 0, Empty, ' ');
+                reg.Adicionar(TTiposDadoEDI.ediAlphaAliEsquerda_____, 0140, 040, 0, Empty, ' ');
                 reg.Adicionar(TTiposDadoEDI.ediAlphaAliEsquerda_____, 0180, 020, 0, Empty, ' ');
                 reg.Adicionar(TTiposDadoEDI.ediAlphaAliEsquerda_____, 0200, 008, 0, "0", '0');
                 reg.Adicionar(TTiposDadoEDI.ediAlphaAliEsquerda_____, 0208, 003, 0, "0", '0');

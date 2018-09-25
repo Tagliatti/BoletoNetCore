@@ -16,9 +16,9 @@ namespace BoletoNetCore
         public string FormataLogradouro(int tamanhoFinal)
         {
             var logradouroCompleto = string.Empty;
-            if (LogradouroNumero.Length != 0)
+            if (!string.IsNullOrEmpty(LogradouroNumero))
                 logradouroCompleto += " " + LogradouroNumero;
-            if (LogradouroComplemento.Length != 0)
+            if (!string.IsNullOrEmpty(LogradouroComplemento))
                 logradouroCompleto += " " + LogradouroComplemento;
 
             if (tamanhoFinal == 0)

@@ -24,8 +24,8 @@ namespace BoletoNetCore
             if (!CarteiraFactory<BancoBrasil>.CarteiraEstaImplementada(contaBancaria.CarteiraComVariacaoPadrao))
                 throw BoletoNetCoreException.CarteiraNaoImplementada(contaBancaria.CarteiraComVariacaoPadrao);
 
-            contaBancaria.FormatarDados("PAGÁVEL EM QUALQUER BANCO ATÉ O VENCIMENTO. APÓS, ATUALIZE O BOLETO NO SITE BB.COM.BR", "", 8);
-
+            contaBancaria.FormatarDados("PAGÁVEL EM QUALQUER BANCO ATÉ O VENCIMENTO. APÓS, ATUALIZE O BOLETO NO SITE BB.COM.BR", "", "", 8);
+            
             if (Cedente.Codigo.Length != 7)
                 throw BoletoNetCoreException.CodigoCedenteInvalido(Cedente.Codigo, 7);
 
