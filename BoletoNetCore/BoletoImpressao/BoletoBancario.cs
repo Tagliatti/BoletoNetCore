@@ -194,6 +194,7 @@ namespace BoletoNetCore
         {
             var html = new StringBuilder();
             var enderecoCedente = "";
+            var enderecoCedenteCompacto = "";
 
             //Oculta o cabeçalho das instruções do boleto
             if (!OcultarInstrucoes)
@@ -269,6 +270,9 @@ namespace BoletoNetCore
                                                             Boleto.Banco.Cedente.Endereco.Cidade,
                                                             Boleto.Banco.Cedente.Endereco.UF,
                                                             Utils.FormataCEP(Boleto.Banco.Cedente.Endereco.CEP));
+                        enderecoCedenteCompacto = string.Format("{0} - CEP: {1}",
+                                                            Boleto.Banco.Cedente.Endereco.FormataLogradouro(25),
+                                                            Utils.FormataCEP(Boleto.Banco.Cedente.Endereco.CEP));
                     }
                 }
             }
@@ -340,7 +344,7 @@ namespace BoletoNetCore
                 .Replace("@MENSAGEMFIXATOPOBOLETO", Boleto.Banco.Cedente.ContaBancaria.MensagemFixaTopoBoleto)
                 .Replace("@MENSAGEMFIXASACADO", Boleto.Banco.Cedente.ContaBancaria.MensagemFixaSacado)
                 .Replace("@DATAVENCIMENTO", dataVencimento)
-                .Replace("@CEDENTE_BOLETO", !Boleto.Banco.Cedente.MostrarCNPJnoBoleto ? Boleto.Banco.Cedente.Nome : string.Format("{0} - CNPJ: {1}", Boleto.Banco.Cedente.Nome, Utils.FormataCNPJ(Boleto.Banco.Cedente.CPFCNPJ)))
+                .Replace("@CEDENTE_BOLETO", !Boleto.Banco.Cedente.MostrarCNPJnoBoleto ? Boleto.Banco.Cedente.Nome : string.Format("{0} - {1}", Boleto.Banco.Cedente.Nome, Utils.FormataCNPJ(Boleto.Banco.Cedente.CPFCNPJ)))
                 .Replace("@CEDENTE", Boleto.Banco.Cedente.Nome)
                 .Replace("@DATADOCUMENTO", Boleto.DataEmissao.ToString("dd/MM/yyyy"))
                 .Replace("@NUMERODOCUMENTO", Boleto.NumeroDocumento)
@@ -367,6 +371,7 @@ namespace BoletoNetCore
                 .Replace("@USODOBANCO", Boleto.UsoBanco)
                 .Replace("@IMAGEMCODIGOBARRA", imagemCodigoBarras)
                 .Replace("@ACEITE", Boleto.Aceite).ToString()
+                .Replace("@ENDERECOCEDENTE_BOLETO", MostrarEnderecoCedente ? string.Format(" - {0}", enderecoCedenteCompacto) : "")
                 .Replace("@ENDERECOCEDENTE", MostrarEnderecoCedente ? enderecoCedente : "")
                 .Replace("@INSTRUCOES", Boleto.MensagemInstrucoesCaixa);
         }

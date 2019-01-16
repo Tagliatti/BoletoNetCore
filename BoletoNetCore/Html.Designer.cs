@@ -465,7 +465,7 @@ namespace BoletoNetCore {
         ///						&lt;td class=&quot;w180&quot;&gt;Agência / Código Beneficiário&lt;/td&gt;
         ///				&lt;/tr&gt;
         ///				&lt;tr class=&quot;cp h12 rBb&quot;&gt;
-        ///						&lt;td&gt;@CEDENTE_BOLETO&lt;/td&gt;
+        ///						&lt;td&gt;@CEDENTE_BOLETO@ENDERECOCEDENTE_BOLETO&lt;/td&gt;
         ///						&lt;td class=&quot;Ar&quot;&gt;@AGENCIACONTA&lt;/td&gt;
         ///				&lt;/tr&gt;
         ///		&lt;/table&gt;.
@@ -759,7 +759,7 @@ namespace BoletoNetCore {
         ///						&lt;td class=&quot;w180 Ar&quot;&gt;Autenticação mecânica&lt;/td&gt;
         ///				&lt;/tr&gt;
         ///				&lt;tr class=&quot;cpN h12&quot;&gt;
-        ///						&lt;td class=&quot;pL6&quot;&gt;@MENSAGEMFIXASACADO@INSTRUCOE&lt;/td&gt;
+        ///						&lt;td class=&quot;pL6&quot;&gt;@MENSAGEMFIXASACADO@INSTRUCOES&lt;/td&gt;
         ///						&lt;td class=&quot;pL6 Ar&quot;&gt;@AUTENTICACAOMECANICA&lt;/td&gt;
         ///				&lt;/tr&gt;
         ///		&lt;/table&gt;.
