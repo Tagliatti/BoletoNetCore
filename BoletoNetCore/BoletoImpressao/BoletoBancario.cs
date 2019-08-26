@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.Drawing.Imaging;
 //Envio por email
 using System.IO;
 using System.Net.Mail;
@@ -738,15 +739,15 @@ namespace BoletoNetCore
             //Salvo a imagem apenas 1 vez
             if (!File.Exists(fnBarra))
             {
-                var imgConverter = new ImageConverter();
-                var imgBuffer = (byte[])imgConverter.ConvertTo(Html.barra, typeof(byte[]));
-                var ms = new MemoryStream(imgBuffer);
-
-                using (Stream stream = File.Create(fnBarra))
+                using (var ms = new MemoryStream())
                 {
-                    CopiarStream(ms, stream);
-                    ms.Flush();
-                    ms.Dispose();
+                    Html.barra.Save(ms, ImageFormat.Bmp);
+                    using (Stream stream = File.Create(fnBarra))
+                    {
+                        CopiarStream(ms, stream);
+                        ms.Flush();
+                        ms.Dispose();
+                    }
                 }
             }
 

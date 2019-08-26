@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Globalization;
+using System.IO;
 
 namespace BoletoNetCore
 {
@@ -197,6 +198,15 @@ namespace BoletoNetCore
             }
         }
 
+        public static byte[] GetBytes(this Image image, ImageFormat format)
+        {
+            using (var ms = new MemoryStream())
+            {
+                image.Save(ms, format);
+                return ms.ToArray();
+            }
+        }
+
         /// <summary>
         /// Converte uma imagem em array de bytes.
         /// </summary>
@@ -209,11 +219,7 @@ namespace BoletoNetCore
 
             byte[] bytes;
             if (image.GetType().ToString() == "System.Drawing.Image")
-            {
-                ImageConverter converter = new ImageConverter();
-                bytes = (byte[])converter.ConvertTo(image, typeof(byte[]));
-                return bytes;
-            }
+                return image.GetBytes(ImageFormat.Bmp);
             else if (image.GetType().ToString() == "System.Drawing.Bitmap")
             {
                 bytes = (byte[])TypeDescriptor.GetConverter(image).ConvertTo(image, typeof(byte[]));

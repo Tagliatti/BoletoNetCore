@@ -26,8 +26,8 @@
     <EmbeddedResource Include="Imagens/*" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="CoreCompat.System.Drawing.v2" Version="5.2.0-preview1-r131" />
     <PackageReference Include="NReco.PdfGenerator.LT" Version="1.1.15" />
+    <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Html.Designer.cs">
