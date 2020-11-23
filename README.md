@@ -1,3 +1,6 @@
+# ATENÇÃO
+O projeto foi migrado de volta ao BoletoNet [BoletoNet/BoletoNetCore](https://github.com/BoletoNet/BoletoNetCore/)
+
 # BoletoNetCore
 BoletoNetCore é um componente desenvolvido em C# e .NET Core para Emissão e Impressão de Boletos Bancários, Geração de Arquivo de Remessa e Leitura do Arquivo de Retorno.
 
